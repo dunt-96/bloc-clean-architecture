@@ -1,0 +1,98 @@
+import 'dart:developer' as developer;
+
+class Helper {
+  /// Get language
+  // static LanguageEnum getLang() {
+  //   LanguageEnum? lang;
+  //   lang = sl<AppSharedPrefs>().getLang();
+  //   lang = lang ?? LanguageEnum.en;
+  //   return lang;
+  // }
+
+  /// Get svg picture path
+  // static String getSvgPath(String name) {
+  //   return "$svgPath$name";
+  // }
+
+  /// Get image picture path
+  // static String getImagePath(String name) {
+  //   return "$imagePath$name";
+  // }
+
+  /// Get vertical space
+  // static double getVerticalSpace() {
+  //   return 10.h;
+  // }
+
+  /// Get horizontal space
+  // static double getHorizontalSpace() {
+  //   return 10.w;
+  // }
+
+  /// Get Dio Header
+  static Map<String, dynamic> getHeaders() {
+    return {}..removeWhere((key, value) => value == null);
+  }
+
+  // static bool isDarkTheme() {
+  //   return sl<AppSharedPrefs>().getIsDarkTheme();
+  // }
+
+// Blue text
+  void logInfo(dynamic msg) {
+    developer.log('\x1B[34m$msg\x1B[0m');
+  }
+
+// Green text
+  void logSuccess(dynamic msg) {
+    developer.log('\x1B[32m$msg\x1B[0m');
+  }
+
+// Yellow text
+  void logWarning(dynamic msg) {
+    developer.log('\x1B[33m$msg\x1B[0m');
+  }
+
+// Red text
+  void logError(dynamic msg) {
+    developer.log('\x1B[31m$msg\x1B[0m');
+  }
+
+  void logEvent(dynamic msg) {
+    developer.log('\x1B[90m$msg\x1B[0m');
+  }
+
+  void logTransition(dynamic msg) {
+    developer.log('\x1B[0m$msg\x1B[0m');
+  }
+
+  void logToken(dynamic msg) {
+    developer.log('\x1B[35m$msg\x1B[0m');
+  }
+
+// export const reset = "\x1b[0m"
+// export const bright = "\x1b[1m"
+// export const dim = "\x1b[2m"
+// export const underscore = "\x1b[4m"
+// export const blink = "\x1b[5m"
+// export const reverse = "\x1b[7m"
+// export const hidden = "\x1b[8m"
+
+// export const black = "\x1b[30m"
+// export const red = "\x1b[31m"
+// export const green = "\x1b[32m"
+// export const yellow = "\x1b[33m"
+// export const blue = "\x1b[34m"
+// export const magenta = "\x1b[35m"
+// export const cyan = "\x1b[36m"
+// export const white = "\x1b[37m"
+
+// export const BGblack = "\x1b[40m"
+// export const BGred = "\x1b[41m"
+// export const BGgreen = "\x1b[42m"
+// export const BGyellow = "\x1b[43m"
+// export const BGblue = "\x1b[44m"
+// export const BGmagenta = "\x1b[45m"
+// export const BGcyan = "\x1b[46m"
+// export const BGwhite = "\x1b[47m"
+}

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:template/core/router/route_constants.dart';
-import 'package:template/features/NotFoundPage/not_found_page.dart';
+import 'package:template/features/not_found_page/not_found_page.dart';
 import 'package:template/features/homepage/presentation/bloc/homepage_bloc.dart';
 import 'package:template/features/homepage/presentation/screens/homepage_screen.dart';
 import 'package:template/features/homepage_detail/presentation/screens/homepage_detail_screen.dart';

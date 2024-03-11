@@ -14,11 +14,12 @@ Future<void> setUpAndRunApp({
 }) async {
   await runZonedGuarded(
     () async {
+      // WidgetsFlutterBinding.ensureInitialized();
       EnvInfo.initialize(env);
       await _setPreferredOrientations();
-      setupLocator();
       Bloc.observer = SimpleBlocDelegate();
       await _setUpNetwork();
+      setupLocator();
 
       return runApp(
         const App(),

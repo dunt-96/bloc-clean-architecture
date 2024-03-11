@@ -1,12 +1,12 @@
 import 'package:template/core/di/injection.dart';
 import 'package:template/core/networks/network.dart';
 
-abstract class HomepageRemoteDataSource {
+abstract class AuthRemoteDataSource {
   Future<void> getData();
   Future<void> createData();
 }
 
-class HomepageRemoteDataSourceImpl implements HomepageRemoteDataSource {
+class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<void> getData() async {
     try {

@@ -19,7 +19,7 @@ Future<void> setUpAndRunApp({
       await _setPreferredOrientations();
       Bloc.observer = SimpleBlocDelegate();
       await _setUpNetwork();
-      setupLocator();
+      await setupLocator();
 
       return runApp(
         const App(),

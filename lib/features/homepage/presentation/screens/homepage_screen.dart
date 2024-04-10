@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:template/core/router/route_constants.dart';
-import 'package:template/features/homepage/presentation/bloc/homepage_bloc.dart';
 
 class HomepageScreen extends StatefulWidget {
   const HomepageScreen({super.key});
@@ -15,11 +13,11 @@ class _HomepageScreenState extends State<HomepageScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      context.read<HomepageBloc>().add(
-            const HomeEventGetData(),
-          );
-    });
+    // WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+    //   context.read<HomepageBloc>().add(
+    //         const HomeEventGetData(),
+    //       );
+    // });
   }
 
   @override

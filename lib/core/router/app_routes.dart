@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:template/core/di/injection.dart';
 import 'package:template/core/router/route_constants.dart';
-import 'package:template/features/not_found_page/not_found_page.dart';
-import 'package:template/features/homepage/presentation/bloc/homepage_bloc.dart';
-import 'package:template/features/homepage/presentation/screens/homepage_screen.dart';
+import 'package:template/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:template/features/auth/presentation/screens/auth_screen.dart';
 import 'package:template/features/homepage_detail/presentation/screens/homepage_detail_screen.dart';
+import 'package:template/features/not_found_page/not_found_page.dart';
 import 'package:template/features/profile/presentation/screens/profile_screen.dart';
 
 class AppRouter {
@@ -13,20 +14,21 @@ class AppRouter {
   static final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
   static final GoRouter _router = GoRouter(
-    initialLocation: Routes.homeNamedPage,
+    initialLocation: Routes.authPageName,
     debugLogDiagnostics: true,
     navigatorKey: _rootNavigatorKey,
     routes: [
       GoRoute(
-        path: Routes.homeNamedPage,
+        path: Routes.authPageName,
         // builder: (context, state) => BlocProvider<HomepageBloc>(
         //   create: (context) => HomepageBloc(),
         //   child: const HomepageScreen(),
         // ),
         pageBuilder: (context, state) => NoTransitionPage(
-          child: BlocProvider<HomepageBloc>(
-            create: (context) => HomepageBloc(),
-            child: const HomepageScreen(),
+          child: BlocProvider<AuthBloc>(
+            create: (context) =>
+                sl<AuthBloc>()..add(const AuthEvent.appStart()),
+            child: const AuthScreen(),
           ),
         ),
         routes: [

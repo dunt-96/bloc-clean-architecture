@@ -1,5 +1,5 @@
 // ignore_for_file: constant_identifier_names, use_setters_to_change_properties, avoid_classes_with_only_static_members
-import 'package:template/configs/app_configs.dart';
+import 'package:template/core/constant/api_constant.dart';
 
 enum AppEnvironment { DEV, STAGING, PROD }
 
@@ -25,9 +25,9 @@ extension _EnvProperties on AppEnvironment {
   };
 
   static final Map<AppEnvironment, String> _connectionStrings = {
-    AppEnvironment.DEV: AppConfigs.baseUrl,
-    AppEnvironment.STAGING: AppConfigs.baseUrl,
-    AppEnvironment.PROD: AppConfigs.baseUrl,
+    AppEnvironment.DEV: ApiConstants.baseUrl,
+    AppEnvironment.STAGING: ApiConstants.baseUrl,
+    AppEnvironment.PROD: ApiConstants.baseUrl,
   };
 
   static const _envs = {

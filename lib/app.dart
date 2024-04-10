@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:template/core/di/injection.dart';
+import 'package:template/core/local_storage/secure_storage/secure_storage.dart';
 import 'package:template/core/router/app_routes.dart';
 
 class App extends StatelessWidget {

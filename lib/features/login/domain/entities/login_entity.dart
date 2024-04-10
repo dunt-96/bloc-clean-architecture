@@ -1,20 +1,18 @@
 class LoginEntity {
   const LoginEntity({
     this.id,
-    this.username,
+    this.name,
     this.email,
-    this.firstName,
-    this.lastName,
-    this.gender,
-    this.image,
-    this.token,
+    this.address,
+    this.phone,
+    this.isAdmin,
+    this.accessToken,
   });
-  final int? id;
-  final String? username;
+  final String? id;
+  final String? name;
   final String? email;
-  final String? firstName;
-  final String? lastName;
-  final String? gender;
-  final String? image;
-  final String? token;
+  final bool? isAdmin;
+  final String? address;
+  final int? phone;
+  final String? accessToken;
 }

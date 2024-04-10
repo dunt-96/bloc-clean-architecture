@@ -1,4 +1,8 @@
+import 'package:template/features/login/domain/entities/login_entity.dart';
+
 abstract class LoginRepository {
-  Future<void> getData();
-  Future<void> createData();
+  Future<LoginEntity> handleLogin({
+    required String email,
+    required String password,
+  });
 }

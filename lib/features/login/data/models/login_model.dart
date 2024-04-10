@@ -1,19 +1,44 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-part 'login_model.freezed.dart';
-part 'login_model.g.dart';
+import 'package:template/features/login/domain/entities/login_entity.dart';
 
-@freezed
-class Login with _$Login {
-  factory Login({
-    @Default(0) int id,
-    @Default('') String username,
-    @Default('') String password,
-    @Default('') String email,
-    @Default('') String firstName,
-    @Default('') String lastName,
-    @Default('') String gender,
-    @Default('') String image,
-    @Default('') String token,
-  }) = _Login;
-  factory Login.fromJson(Map<String, Object?> json) => _$LoginFromJson(json);
+class LoginModel {
+  LoginModel({
+    this.id,
+    this.name,
+    this.email,
+    this.isAdmin,
+    this.address,
+    this.avatar,
+    this.phone,
+    this.accessToken,
+  });
+
+  factory LoginModel.fromJson(Map<String, dynamic> json) => LoginModel(
+        id: json['_id'],
+        name: json['name'],
+        email: json['email'],
+        isAdmin: json['isAdmin'],
+        address: json['address'],
+        phone: json['phone'],
+        avatar: json['avatar'],
+        accessToken: json['access_token'],
+      );
+
+  final String? id;
+  final String? name;
+  final String? email;
+  final bool? isAdmin;
+  final String? address;
+  final String? avatar;
+  final int? phone;
+  final String? accessToken;
+
+  LoginEntity toEntity() => LoginEntity(
+        id: id,
+        name: name,
+        email: email,
+        isAdmin: isAdmin,
+        address: address,
+        phone: phone,
+        accessToken: accessToken,
+      );
 }

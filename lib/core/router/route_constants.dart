@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:template/features/not_found_page/not_found_page.dart';
 
 class Routes {
-  static const homeNamedPage = '/';
+  static const authPageName = '/';
   static const homeDetailsNamedPage = 'details';
   static const profileNamedPage = '/profile';
   static const profileDetailsNamedPage = 'details';

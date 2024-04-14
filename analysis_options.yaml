@@ -78,6 +78,7 @@ linter:
     - omit_local_variable_types
     - one_member_abstracts
     - only_throw_errors
+    - inference_failure_on_function_invocation: true
     - package_api_docs
     - parameter_assignments
     - prefer_asserts_in_initializer_lists

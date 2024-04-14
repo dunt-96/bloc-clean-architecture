@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/core/di/injection.dart';
 import 'package:template/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:template/features/homepage/presentation/bloc/homepage_bloc.dart';
 import 'package:template/features/homepage/presentation/screens/homepage_screen.dart';

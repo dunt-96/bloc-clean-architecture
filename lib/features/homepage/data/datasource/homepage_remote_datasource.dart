@@ -10,7 +10,7 @@ class HomepageRemoteDataSourceImpl implements HomepageRemoteDataSource {
   @override
   Future<void> getData() async {
     try {
-      final res = await sl<AppHttpClient>().get('/posts/1');
+      final res = await sl<AppHttpClient>().get<void>('/posts/1');
       print(res);
     } catch (e) {}
   }

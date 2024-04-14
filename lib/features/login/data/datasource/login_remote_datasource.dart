@@ -22,7 +22,8 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       'email': email,
       'password': password,
     };
-    final res = await sl<AppHttpClient>().post(ApiConstants.login, data: data);
+    final res =
+        await sl<AppHttpClient>().post<dynamic>(ApiConstants.login, data: data);
     final loginEntity = LoginModel.fromJson(res.data['data']).toEntity();
 
     return loginEntity;

@@ -18,7 +18,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthLoggedOutEvent>(_onAuthLoggedOut);
   }
 
-Future<void> _onAuthAppStart(
+  Future<void> _onAuthAppStart(
     AuthAppStartEvent event,
     Emitter<AuthState> emit,
   ) async {

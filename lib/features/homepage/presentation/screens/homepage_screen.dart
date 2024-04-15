@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template/core/router/route_constants.dart';
 
 class HomepageScreen extends StatefulWidget {
   const HomepageScreen({super.key});
@@ -26,7 +25,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
       body: Center(
         child: TextButton(
           child: const Text('go to detail home page'),
-          onPressed: () => context.push(Routes.profileNamedPage),
+          onPressed: () => context.push('/home/home-details'),
         ),
       ),
     );

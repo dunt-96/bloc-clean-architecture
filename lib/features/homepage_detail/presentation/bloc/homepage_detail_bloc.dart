@@ -21,6 +21,7 @@ class HomepageDetailBloc
     Emitter<HomepageDetailState> emit,
   ) async {
     final res = await sl<GetDataUseCase>().getData();
+    print('saa');
   }
 
   Future<void> _createData(

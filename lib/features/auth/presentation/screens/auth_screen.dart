@@ -40,6 +40,7 @@ class AuthScreen extends StatelessWidget {
             ),
           );
         }
+
         return BlocProvider(
           create: (context) => LoginBloc(),
           child: const LoginScreen(),

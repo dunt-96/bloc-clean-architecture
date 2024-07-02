@@ -40,8 +40,8 @@ class DashboardScreen extends StatelessWidget {
               GestureDetector(
                 onTap: () => onDestinationSelected(1),
                 child: ItemNavigation(
-                  iconPath: 'assets/icon/ic_profile.svg',
-                  title: 'Profile',
+                  iconPath: 'assets/icon/ic_qibla.svg',
+                  title: 'Qibla',
                   isSelected: selectedIndex == 1,
                 ),
               ),
@@ -49,7 +49,7 @@ class DashboardScreen extends StatelessWidget {
                 onTap: () => onDestinationSelected(2),
                 child: ItemNavigation(
                   iconPath: 'assets/icon/ic_saved.svg',
-                  title: 'Saved',
+                  title: 'Prayer times',
                   isSelected: selectedIndex == 2,
                 ),
               ),
@@ -64,51 +64,7 @@ class DashboardScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: CustomScrollView(
-          shrinkWrap: true,
-          // scrollBehavior: const ScrollBehavior(),
-          // physics: const NeverScrollableScrollPhysics(),
-          slivers: [
-            SliverAppBar(
-              stretch: false,
-              onStretchTrigger: () async {
-                // Triggers when stretching
-              },
-              // [stretchTriggerOffset] describes the amount of overscroll that must occur
-              // to trigger [onStretchTrigger]
-              //
-              // Setting [stretchTriggerOffset] to a value of 300.0 will trigger
-              // [onStretchTrigger] when the user has overscrolled by 300.0 pixels.
-              stretchTriggerOffset: 100,
-              expandedHeight: 100,
-              flexibleSpace: const FlexibleSpaceBar(
-                title: Text('SliverAppBar'),
-                background: FlutterLogo(),
-              ),
-            ),
-            SliverFixedExtentList.builder(
-              itemExtent: 50,
-              itemCount: 20,
-              itemBuilder: (context, index) {
-                return Container(
-                  color: Colors.red,
-                  child: const Text('adasd'),
-                );
-              },
-            ),
-            // SliverFixedExtentList.builder(
-            //   itemBuilder: (context, index) {
-            //     return const Text('data');
-            //   },
-            //   itemExtent: 100,
-            //   itemCount: 10,
-            // ),
-            SliverFillRemaining(
-              // hasScrollBody: false,
-              child: body,
-            ),
-          ],
-        ),
+        body: body,
       ),
     );
   }

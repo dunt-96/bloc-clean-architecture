@@ -12,7 +12,7 @@ part 'auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc() : super(const AuthState.initial()) {
+  AuthBloc() : super(const AuthState.authenticated()) {
     on<AuthAppStartEvent>(_onAuthAppStart);
     on<AuthLoggedInEvent>(_onAuthLoggedIn);
     on<AuthLoggedOutEvent>(_onAuthLoggedOut);
@@ -29,7 +29,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       return emit(const AuthState.authenticated());
     }
 
-    emit(const AuthState.unAuthenticated());
+    emit(const AuthState.authenticated());
   }
 
   Future<void> _onAuthLoggedIn(

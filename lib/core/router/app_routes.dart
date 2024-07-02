@@ -9,7 +9,7 @@ import 'package:template/features/explore/presentation/screens/explore_screen.da
 import 'package:template/features/homepage/presentation/screens/homepage_screen.dart';
 import 'package:template/features/homepage_detail/presentation/screens/homepage_detail_screen.dart';
 import 'package:template/features/not_found_page/not_found_page.dart';
-import 'package:template/features/profile/presentation/screens/profile_screen.dart';
+import 'package:template/features/profile/presentation/screens/prayer_times.dart';
 import 'package:template/features/profile_detail/presentation/screens/profile_detail_screen.dart';
 import 'package:template/features/saved/presentation/screens/saved_screen.dart';
 
@@ -55,30 +55,30 @@ class AppRouter {
               ),
             ],
           ),
-          StatefulShellBranch(
-            navigatorKey: _shellNavigatorProfileKey,
-            routes: [
-              GoRoute(
-                path: Routes.profileNamedPage,
-                pageBuilder: (context, state) => const NoTransitionPage(
-                  child: ProfileScreen(),
-                ),
-                routes: [
-                  GoRoute(
-                    path: Routes.profileDetailsNamedPage,
-                    builder: (context, state) => const ProfileDetailScreen(),
-                  ),
-                ],
-              ),
-            ],
-          ),
+          // StatefulShellBranch(
+          //   navigatorKey: _shellNavigatorProfileKey,
+          //   routes: [
+          //     GoRoute(
+          //       path: Routes.profileNamedPage,
+          //       pageBuilder: (context, state) => const NoTransitionPage(
+          //         child: ProfileScreen(),
+          //       ),
+          //       routes: [
+          //         GoRoute(
+          //           path: Routes.profileDetailsNamedPage,
+          //           builder: (context, state) => const ProfileDetailScreen(),
+          //         ),
+          //       ],
+          //     ),
+          //   ],
+          // ),
           StatefulShellBranch(
             navigatorKey: _shellNavigatorSavedKey,
             routes: [
               GoRoute(
                 path: Routes.savedPageName,
                 pageBuilder: (context, state) => const NoTransitionPage(
-                  child: SavedScreen(),
+                  child: PrayerTime(),
                 ),
                 // routes: [
                 //   GoRoute(

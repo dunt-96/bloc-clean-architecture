@@ -1,21 +1,45 @@
 PODS:
   - Flutter (1.0.0)
+  - flutter_compass_v2 (0.0.1):
+    - Flutter
+  - flutter_qiblah (0.0.1):
+    - Flutter
   - flutter_secure_storage (3.3.1):
+    - Flutter
+  - geolocator_apple (1.2.0):
+    - Flutter
+  - location (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_compass_v2 (from `.symlinks/plugins/flutter_compass_v2/ios`)
+  - flutter_qiblah (from `.symlinks/plugins/flutter_qiblah/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
+  - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
+  - location (from `.symlinks/plugins/location/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_compass_v2:
+    :path: ".symlinks/plugins/flutter_compass_v2/ios"
+  flutter_qiblah:
+    :path: ".symlinks/plugins/flutter_qiblah/ios"
   flutter_secure_storage:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
+  geolocator_apple:
+    :path: ".symlinks/plugins/geolocator_apple/ios"
+  location:
+    :path: ".symlinks/plugins/location/ios"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_compass_v2: f7704b078814b705e76ae2bd48fe48ae6cd067df
+  flutter_qiblah: f69eeb708d127a2634073ab1f27771c979928f50
   flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
+  geolocator_apple: 6cbaf322953988e009e5ecb481f07efece75c450
+  location: d5cf8598915965547c3f36761ae9cc4f4e87d22e
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 

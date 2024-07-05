@@ -9,7 +9,7 @@ import 'package:template/features/explore/presentation/screens/explore_screen.da
 import 'package:template/features/homepage/presentation/screens/homepage_screen.dart';
 import 'package:template/features/homepage_detail/presentation/screens/homepage_detail_screen.dart';
 import 'package:template/features/not_found_page/not_found_page.dart';
-import 'package:template/features/profile/presentation/screens/prayer_times.dart';
+import 'package:template/features/prayer_times/presentation/screens/prayer_times.dart';
 import 'package:template/features/profile_detail/presentation/screens/profile_detail_screen.dart';
 import 'package:template/features/saved/presentation/screens/saved_screen.dart';
 

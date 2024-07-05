@@ -1,6 +1,5 @@
 import 'package:template/core/di/injection.dart';
 import 'package:template/features/login/data/datasource/login_remote_datasource.dart';
-import 'package:template/features/login/data/models/login_model.dart';
 import 'package:template/features/login/domain/entities/login_entity.dart';
 import 'package:template/features/login/domain/repository/login_repository.dart';
 

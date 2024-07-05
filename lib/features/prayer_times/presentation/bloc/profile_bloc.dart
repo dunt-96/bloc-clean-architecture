@@ -2,8 +2,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:template/core/di/injection.dart';
-import 'package:template/features/profile/domain/usecases/create_data_usecase.dart';
-import 'package:template/features/profile/domain/usecases/get_data_usecase.dart';
+import 'package:template/features/prayer_times/domain/usecases/create_data_usecase.dart';
+import 'package:template/features/prayer_times/domain/usecases/get_data_usecase.dart';
 
 part 'profile_bloc.freezed.dart';
 part 'profile_event.dart';
